@@ -103,30 +103,24 @@ public class Espetaculo {
 		
 		List<Sessao> sessoes = new ArrayList<Sessao>();
 		LocalDate dia = inicio;
+		Integer diasPeriodicidade = null;
 		switch (periodicidade) {
 		case DIARIA:
-			while (!dia.isAfter(fim)) {
-				Sessao sessao = new Sessao();
-				sessao.setEspetaculo(this);
-				sessao.setInicio(dia.toDateTime(horario));
-				sessoes.add(sessao);
-				dia = dia.plusDays(1);
-			}
-				
+			diasPeriodicidade = 1;
 			break;
 		case SEMANAL:
-			while (!dia.isAfter(fim)) {
-				Sessao sessao = new Sessao();
-				sessao.setEspetaculo(this);
-				sessao.setInicio(dia.toDateTime(horario));
-				sessoes.add(sessao);
-				dia = dia.plusDays(7);
-			}
-			
+			diasPeriodicidade = 7;
 			break;
-
 		default:
 			break;
+		}
+
+		while (!dia.isAfter(fim)) {
+			Sessao sessao = new Sessao();
+			sessao.setEspetaculo(this);
+			sessao.setInicio(dia.toDateTime(horario));
+			sessoes.add(sessao);
+			dia = dia.plusDays(diasPeriodicidade);
 		}
 		
 		return sessoes;
