@@ -31,7 +31,7 @@ public class EstabelecimentosController {
 		return diretorio.todos();
 	}
 
-	@Post("/estabelecimentos")
+	@Post("/estabelecimentos") 
 	public void adiciona(final Estabelecimento estabelecimento) {
 		// validando!
 		validator.checking(new Validations() {{
