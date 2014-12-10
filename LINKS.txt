@@ -1,1 +1,14 @@
+Link para documentos e livros de testes e refactoring
+
+LINKS:
 Link contendo conceitos sobre TDD - Test-Driven Development - http://tdd.caelum.com.br/
+
+
+LIVROS:
+TDD by Example - Kent Beck
+TDD nno mundo atual - Aniche
+Clean Code - Robert Martin
+Testes GOOS (Growing Object Oriented Software, Guided by Tests) - Nat Price
+
+
+Livro Refactoring - Martin Fowler

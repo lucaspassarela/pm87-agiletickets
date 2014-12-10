@@ -111,4 +111,16 @@ public class Sessao {
 		return preco;
 	}
 	
+	public Double getPercentualReservado() {
+		return (getTotalIngressos() - getIngressosReservados()) / getTotalIngressos().doubleValue();
+	}
+	
+	public BigDecimal calculoPercentualAcrescimo(Double percentual) {
+		return getPreco().multiply(BigDecimal.valueOf(percentual));
+	}
+	
+	
+	public boolean isDoTipo(TipoDeEspetaculo tipoDeEspetaculo) {
+		return getEspetaculo().getTipo().equals(tipoDeEspetaculo);
+	}
 }
