@@ -112,7 +112,7 @@ public class Espetaculo {
 			dia = dia.plusDays(periodicidade.getDiasPeriodicidade());
 		}
 		
-		return null;
+		return sessoes;
 	}
 	
 	public boolean Vagas(int qtd, int min)
