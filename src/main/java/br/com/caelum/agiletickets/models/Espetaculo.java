@@ -104,7 +104,7 @@ public class Espetaculo {
 		List<Sessao> sessoes = new ArrayList<Sessao>();
 		LocalDate dia = inicio;
 		
-		while (dia.isAfter(fim)) {
+		while (!dia.isAfter(fim)) {
 			Sessao sessao = new Sessao();
 			sessao.setEspetaculo(this);
 			sessao.setInicio(dia.toDateTime(horario));
@@ -112,7 +112,7 @@ public class Espetaculo {
 			dia = dia.plusDays(periodicidade.getDiasPeriodicidade());
 		}
 		
-		return sessoes;
+		return null;
 	}
 	
 	public boolean Vagas(int qtd, int min)
